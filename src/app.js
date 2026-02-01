@@ -12,9 +12,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// API routes
-app.use("/api/auth", authRoutes);
 app.use("/api/clases", clasesRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/clubs", clubRoutes);
 app.use("/api/conquistadores", conquistadoresRoutes);
 app.use("/api/requisitos", requisitosRoutes);
