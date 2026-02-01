@@ -23,12 +23,10 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    // Guardar sesión
     localStorage.setItem("token", data.token);
     localStorage.setItem("rol", data.user.rol);
     localStorage.setItem("club_id", data.user.club_id);
 
-    // Redirigir según rol
     if (data.user.rol.toLowerCase() === "distrital") {
       window.location.href = "/dashboard-distrital.html";
     } else {
